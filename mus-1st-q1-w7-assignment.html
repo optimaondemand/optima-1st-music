@@ -380,17 +380,21 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
 <div class="card theme-purple">
   <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">🎮</span></div><div><div class="card-head-label">Practice Activity</div><div class="card-head-title">Long or Short Sound?</div></div></div>
   <div class="card-body"><style>.gnxt{margin-top:12px;padding:8px 28px;background:#5B4FBE;color:#fff;border:none;border-radius:20px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;}.gnxt:hover{background:#4a3fa8;}</style>
+    <div style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB);border:2px solid #90CAF9;border-radius:12px;padding:14px 18px;margin-bottom:20px;text-align:center;font-size:15px;font-weight:700;color:#1565C0;line-height:1.5">
+      📝 <strong>Note for families:</strong> Please submit your work from the assignment image above. The interactive below is just for extra practice and fun &mdash; no need to submit it!
+    </div>
+
 <div class="gw" id="gw7">
 <div class="gp" id="gw7p">Sound 1 of 6</div>
 <div class="gc">
   <span class="ge" id="gw7e"></span>
   <div class="gt" id="gw7t"></div>
   <div style="margin-bottom:12px">
-    <button class="hear-btn" onclick="gw7hear()">🔊 Hear the sound!</button>
+    <button type="button" class="hear-btn" onclick="gw7hear()">🔊 Hear the sound!</button>
   </div>
   <div class="gbs" id="gw7bs">
-    <button class="gb gb-b" onclick="gw7pick('long')" style="font-size:18px">LONG 〰️</button>
-    <button class="gb gb-r" onclick="gw7pick('short')" style="font-size:18px">SHORT ⚡</button>
+    <button type="button" class="gb gb-b" onclick="gw7pick('long')" style="font-size:18px">LONG 〰️</button>
+    <button type="button" class="gb gb-r" onclick="gw7pick('short')" style="font-size:18px">SHORT ⚡</button>
   </div>
   <div class="gf" id="gw7f" style="display:none"></div>
 </div></div>
@@ -431,8 +435,8 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
     _chime(ok);
     document.getElementById('gw7bs').style.display='none';
     var lbl=((i+1)<items.length)?'Next &#10145;':'See My Score! 🎵';
-    if(ok){s++;fb.className='gf gf-ok';fb.innerHTML=it.y+'<br><button class="gnxt" onclick="gw7next()">'+lbl+'</button>';}
-    else{fb.className='gf gf-no';fb.innerHTML=it.n+'<br><button class="gnxt" onclick="gw7next()">'+lbl+'</button>';}
+    if(ok){s++;fb.className='gf gf-ok';fb.innerHTML=it.y+'<br><button type="button" class="gnxt" onclick="gw7next()">'+lbl+'</button>';}
+    else{fb.className='gf gf-no';fb.innerHTML=it.n+'<br><button type="button" class="gnxt" onclick="gw7next()">'+lbl+'</button>';}
     fb.style.display='block'; i++;
   };
   window.gw7next=function(){

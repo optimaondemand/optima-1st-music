@@ -391,6 +391,10 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
 .echo-pick.picked-rest{border-color:#90CAF9;background:#E3F2FD}
 .echo-pick.dim{opacity:0.35}
 </style>
+    <div style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB);border:2px solid #90CAF9;border-radius:12px;padding:14px 18px;margin-bottom:20px;text-align:center;font-size:15px;font-weight:700;color:#1565C0;line-height:1.5">
+      📝 <strong>Note for families:</strong> Please submit your work from the assignment image above. The interactive below is just for extra practice and fun &mdash; no need to submit it!
+    </div>
+
 <div class="gw" id="gw5">
 <div class="gp" id="gw5p">Echo the Beat — Round 1 of 3</div>
 <div class="gc">
@@ -399,7 +403,7 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
     <div style="background:#FFF8E1;border:2px solid #FFE082;border-radius:14px;padding:10px 16px;margin-bottom:12px;font-size:13px;font-weight:700;color:#5D4037;line-height:1.6">
       👏 = CLAP &nbsp;|&nbsp; ⏸️ = REST<br>Watch the pattern light up — then pick <strong>👏 CLAP</strong> or <strong>⏸️ REST</strong> for each beat.
     </div>
-    <button class="gb gb-g" onclick="gw5start()" style="font-size:16px;padding:12px 28px">▶️ Start Round 1</button>
+    <button type="button" class="gb gb-g" onclick="gw5start()" style="font-size:16px;padding:12px 28px">▶️ Start Round 1</button>
   </div>
   <div id="gw5-watch-wrap" style="display:none;text-align:center">
     <div style="font-size:13px;font-weight:800;color:#1565C0;margin-bottom:8px;background:#E3F2FD;border-radius:10px;padding:6px 12px">👀 Watch and listen carefully!</div>
@@ -410,7 +414,7 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
       🎵 Your turn! Pick <strong>👏 CLAP</strong> or <strong>⏸️ REST</strong> for each beat.
     </div>
     <div id="gw5-slots" style="display:flex;justify-content:center;flex-wrap:wrap;margin:8px 0"></div>
-    <button class="gb gb-p" id="gw5-checkbtn" onclick="gw5check()" style="margin-top:10px" disabled>Check My Echo 🔍</button>
+    <button type="button" class="gb gb-p" id="gw5-checkbtn" onclick="gw5check()" style="margin-top:10px" disabled>Check My Echo 🔍</button>
   </div>
   <div class="gf" id="gw5f" style="display:none"></div>
 </div></div>
@@ -446,8 +450,8 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
     p.forEach(function(b,j){
       sl.innerHTML+='<div class="echo-slot-pair"><div class="slot-label">Beat '+(j+1)+'</div>'
         +'<div class="echo-pair-btns">'
-        +'<button class="echo-pick" id="gw5c'+j+'" onclick="gw5pick('+j+',1)">👏<br><span style=\"font-size:10px\">CLAP</span></button>'
-        +'<button class="echo-pick" id="gw5r'+j+'" onclick="gw5pick('+j+',0)">⏸️<br><span style=\"font-size:10px\">REST</span></button>'
+        +'<button type="button" class="echo-pick" id="gw5c'+j+'" onclick="gw5pick('+j+',1)">👏<br><span style=\"font-size:10px\">CLAP</span></button>'
+        +'<button type="button" class="echo-pick" id="gw5r'+j+'" onclick="gw5pick('+j+',0)">⏸️<br><span style=\"font-size:10px\">REST</span></button>'
         +'</div></div>';
     });
     document.getElementById('gw5-pick-wrap').style.display='block';
@@ -475,7 +479,7 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
         document.getElementById('gw5p').textContent='Echo the Beat — Round '+(r+1)+' of 3';
         document.getElementById('gw5-pick-wrap').style.display='none';
         document.getElementById('gw5f').style.display='none';
-        document.getElementById('gw5-start-wrap').innerHTML='<button class="gb gb-g" onclick="gw5start()" style="font-size:16px;padding:12px 28px">▶️ Start Round '+(r+1)+'</button>';
+        document.getElementById('gw5-start-wrap').innerHTML='<button type="button" class="gb gb-g" onclick="gw5start()" style="font-size:16px;padding:12px 28px">▶️ Start Round '+(r+1)+'</button>';
         document.getElementById('gw5-start-wrap').style.display='block';
       } else {
         document.getElementById('gw5').innerHTML='<div class="gs">🔁 You echoed '+s+' out of 3 patterns!<br><span style="font-size:14px;font-weight:700;color:#B8860B;display:block;margin-top:8px">'+(s===3?'Incredible echo! You are a music listener superstar! 🎵':'Keep practicing — listening carefully is the secret to echoing! 👂')+'</span></div>';

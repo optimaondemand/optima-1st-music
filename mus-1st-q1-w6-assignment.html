@@ -379,14 +379,18 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
 <div class="art-divider"><span class="bounce-emoji">🎵</span> <span class="bounce-emoji">🎶</span> <span class="bounce-emoji">🎸</span> <span class="bounce-emoji">🎹</span> <span class="bounce-emoji">🥁</span> <span class="bounce-emoji">🎺</span> <span class="bounce-emoji">🎻</span> <span class="bounce-emoji">🎼</span></div>
 <div class="card theme-purple">
   <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">🎮</span></div><div><div class="card-head-label">Practice Activity</div><div class="card-head-title">Folk or Not?</div></div></div>
+    <div style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB);border:2px solid #90CAF9;border-radius:12px;padding:14px 18px;margin-bottom:20px;text-align:center;font-size:15px;font-weight:700;color:#1565C0;line-height:1.5">
+      📝 <strong>Note for families:</strong> Please submit your work from the assignment image above. The interactive below is just for extra practice and fun &mdash; no need to submit it!
+    </div>
+
   <div class="card-body"><div class="gw" id="gw6">
 <div class="gp" id="gw6p">Clue 1 of 6</div>
 <div class="gc">
   <span class="ge" id="gw6e"></span>
   <div class="gt" id="gw6t"></div>
   <div class="gbs">
-    <button class="gb gb-y" onclick="gw6pick('folk')">Folk Music 🪕</button>
-    <button class="gb gb-p" onclick="gw6pick('not')">Other Music 🎧</button>
+    <button type="button" class="gb gb-y" onclick="gw6pick('folk')">Folk Music 🪕</button>
+    <button type="button" class="gb gb-p" onclick="gw6pick('not')">Other Music 🎧</button>
   </div>
   <div class="gf" id="gw6f" style="display:none"></div>
 </div></div>

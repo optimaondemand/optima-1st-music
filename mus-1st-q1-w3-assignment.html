@@ -379,6 +379,10 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
 <div class="art-divider"><span class="bounce-emoji">🎵</span> <span class="bounce-emoji">🎶</span> <span class="bounce-emoji">🎸</span> <span class="bounce-emoji">🎹</span> <span class="bounce-emoji">🥁</span> <span class="bounce-emoji">🎺</span> <span class="bounce-emoji">🎻</span> <span class="bounce-emoji">🎼</span></div>
 <div class="card theme-purple">
   <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">🎮</span></div><div><div class="card-head-label">Practice Activity</div><div class="card-head-title">Animal Song Match</div></div></div>
+    <div style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB);border:2px solid #90CAF9;border-radius:12px;padding:14px 18px;margin-bottom:20px;text-align:center;font-size:15px;font-weight:700;color:#1565C0;line-height:1.5">
+      📝 <strong>Note for families:</strong> Please submit your work from the assignment image above. The interactive below is just for extra practice and fun &mdash; no need to submit it!
+    </div>
+
   <div class="card-body"><div class="gw" id="gw3">
 <div class="gp" id="gw3p">Animal 1 of 5</div>
 <div class="gc">
@@ -412,7 +416,7 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
     document.getElementById('gw3p').textContent='Animal '+(i+1)+' of '+items.length;
     document.getElementById('gw3f').style.display='none';
     document.getElementById('gw3bs').innerHTML=songs.map(function(sg,j){
-      return '<button class="gb '+sc[j]+'" style="font-size:13px;padding:10px 14px" onclick="gw3pick('+j+')">🎵 '+sg+'</button>';
+      return '<button type="button" class="gb '+sc[j]+'" style="font-size:13px;padding:10px 14px" onclick="gw3pick('+j+')">🎵 '+sg+'</button>';
     }).join('');
   }
   window.gw3pick=function(j){

@@ -379,17 +379,21 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
 <div class="art-divider"><span class="bounce-emoji">🎵</span> <span class="bounce-emoji">🎶</span> <span class="bounce-emoji">🎸</span> <span class="bounce-emoji">🎹</span> <span class="bounce-emoji">🥁</span> <span class="bounce-emoji">🎺</span> <span class="bounce-emoji">🎻</span> <span class="bounce-emoji">🎼</span></div>
 <div class="card theme-purple">
   <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">🎮</span></div><div><div class="card-head-label">Practice Activity</div><div class="card-head-title">High or Low Pitch?</div></div></div>
+    <div style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB);border:2px solid #90CAF9;border-radius:12px;padding:14px 18px;margin-bottom:20px;text-align:center;font-size:15px;font-weight:700;color:#1565C0;line-height:1.5">
+      📝 <strong>Note for families:</strong> Please submit your work from the assignment image above. The interactive below is just for extra practice and fun &mdash; no need to submit it!
+    </div>
+
   <div class="card-body"><div class="gw" id="gw8">
 <div class="gp" id="gw8p">Sound 1 of 6</div>
 <div class="gc">
   <span class="ge" id="gw8e"></span>
   <div class="gt" id="gw8t"></div>
   <div style="margin-bottom:12px">
-    <button class="hear-btn" onclick="gw8hear()">🔊 Hear the sound!</button>
+    <button type="button" class="hear-btn" onclick="gw8hear()">🔊 Hear the sound!</button>
   </div>
   <div class="gbs" id="gw8bs">
-    <button class="gb gb-b" onclick="gw8pick('high')" style="font-size:18px">⬆️ HIGH</button>
-    <button class="gb gb-r" onclick="gw8pick('low')" style="font-size:18px">⬇️ LOW</button>
+    <button type="button" class="gb gb-b" onclick="gw8pick('high')" style="font-size:18px">⬆️ HIGH</button>
+    <button type="button" class="gb gb-r" onclick="gw8pick('low')" style="font-size:18px">⬇️ LOW</button>
   </div>
   <div class="gf" id="gw8f" style="display:none"></div>
 </div>
@@ -432,8 +436,8 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
     _chime(ok);
     document.getElementById('gw8bs').style.display='none';
     var lbl=((i+1)<items.length)?'Next &#10145;':'See My Score! 🎵';
-    if(ok){s++;fb.className='gf gf-ok';fb.innerHTML=it.y+'<br><button class="gnxt" onclick="gw8next()">'+lbl+'</button>';}
-    else{fb.className='gf gf-no';fb.innerHTML=it.n+'<br><button class="gnxt" onclick="gw8next()">'+lbl+'</button>';}
+    if(ok){s++;fb.className='gf gf-ok';fb.innerHTML=it.y+'<br><button type="button" class="gnxt" onclick="gw8next()">'+lbl+'</button>';}
+    else{fb.className='gf gf-no';fb.innerHTML=it.n+'<br><button type="button" class="gnxt" onclick="gw8next()">'+lbl+'</button>';}
     fb.style.display='block'; i++;
   };
   window.gw8next=function(){
