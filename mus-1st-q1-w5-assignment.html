@@ -111,16 +111,20 @@ body{font-family:'Nunito','Century Gothic','Arial Rounded MT Bold',Verdana,sans-
 .hear-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:2px solid #0288D1;border-radius:20px;background:#E1F5FE;color:#0277BD;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;margin-bottom:12px;transition:transform 0.12s,background 0.12s}
 .hear-btn:hover{background:#B3E5FC;transform:scale(1.04)}
 .hear-btn:active{transform:scale(0.97)}
-.echo-beat-live{display:inline-flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:14px;font-size:30px;margin:4px;transition:transform 0.15s,background 0.15s,box-shadow 0.15s;background:#E3F2FD;}
-.echo-beat-live.lit{background:#FFF176;transform:scale(1.28);box-shadow:0 0 14px #FDD835;}
+.echo-beat-live{display:inline-flex;align-items:center;justify-content:center;width:72px;height:72px;border-radius:16px;font-size:36px;margin:6px;transition:transform 0.15s,background 0.15s,box-shadow 0.15s,border-color 0.15s;background:#E3F2FD;border:3px solid #B0BEC5;}
+.echo-beat-live.clap-beat{background:#E8F5E9;border-color:#66BB6A;}
+.echo-beat-live.rest-beat{background:#E3F2FD;border-color:#90CAF9;}
+.echo-beat-live.lit{transform:scale(1.3);box-shadow:0 0 18px #FDD835;}
+.echo-beat-live.lit.clap-beat{background:#FFF176;border-color:#F9A825;}
+.echo-beat-live.lit.rest-beat{background:#B3E5FC;border-color:#0288D1;}
 .echo-slot-pair{display:flex;flex-direction:column;align-items:center;gap:6px;margin:4px 6px;}
 .echo-slot-pair .slot-label{font-size:11px;font-weight:800;color:#546E7A;text-transform:uppercase;letter-spacing:.5px;}
 .echo-pair-btns{display:flex;gap:6px;}
-.echo-pick{padding:8px 12px;border-radius:12px;border:3px solid #ccc;background:#fff;font-size:20px;cursor:pointer;font-weight:700;transition:border-color .15s,background .15s,transform .1s;font-family:inherit;}
+.echo-pick{padding:10px 16px;border-radius:14px;border:3px solid #ccc;background:#fff;font-size:24px;cursor:pointer;font-weight:700;transition:border-color .15s,background .15s,transform .1s;font-family:inherit;min-width:70px;}
 .echo-pick:hover{transform:scale(1.08);}
-.echo-pick.picked-clap{border-color:#4CAF50;background:#E8F5E9;}
-.echo-pick.picked-rest{border-color:#90CAF9;background:#E3F2FD;}
-.echo-pick.dim{opacity:0.35;}
+.echo-pick.picked-clap{border-color:#4CAF50;background:#C8E6C9;box-shadow:0 0 8px rgba(76,175,80,0.3);}
+.echo-pick.picked-rest{border-color:#42A5F5;background:#BBDEFB;box-shadow:0 0 8px rgba(66,165,245,0.3);}
+.echo-pick.dim{opacity:0.25;}
 </style>
 
 <script>
@@ -380,16 +384,20 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
 <div class="card theme-purple">
   <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">🎮</span></div><div><div class="card-head-label">Practice Activity</div><div class="card-head-title">Echo the Beat</div></div></div>
   <div class="card-body"><style>
-.echo-beat-live{display:inline-flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:14px;font-size:30px;margin:4px;transition:transform 0.15s,background 0.15s,box-shadow 0.15s;background:#E3F2FD}
-.echo-beat-live.lit{background:#FFF176;transform:scale(1.28);box-shadow:0 0 14px #FDD835}
+.echo-beat-live{display:inline-flex;align-items:center;justify-content:center;width:72px;height:72px;border-radius:16px;font-size:36px;margin:6px;transition:transform 0.15s,background 0.15s,box-shadow 0.15s,border-color 0.15s;background:#E3F2FD;border:3px solid #B0BEC5}
+.echo-beat-live.clap-beat{background:#E8F5E9;border-color:#66BB6A}
+.echo-beat-live.rest-beat{background:#E3F2FD;border-color:#90CAF9}
+.echo-beat-live.lit{transform:scale(1.3);box-shadow:0 0 18px #FDD835}
+.echo-beat-live.lit.clap-beat{background:#FFF176;border-color:#F9A825}
+.echo-beat-live.lit.rest-beat{background:#B3E5FC;border-color:#0288D1}
 .echo-slot-pair{display:flex;flex-direction:column;align-items:center;gap:6px;margin:4px 6px}
 .echo-slot-pair .slot-label{font-size:11px;font-weight:800;color:#546E7A;text-transform:uppercase;letter-spacing:.5px}
 .echo-pair-btns{display:flex;gap:6px}
-.echo-pick{padding:8px 12px;border-radius:12px;border:3px solid #ccc;background:#fff;font-size:20px;cursor:pointer;font-weight:700;transition:border-color .15s,background .15s,transform .1s;font-family:inherit}
+.echo-pick{padding:10px 16px;border-radius:14px;border:3px solid #ccc;background:#fff;font-size:24px;cursor:pointer;font-weight:700;transition:border-color .15s,background .15s,transform .1s;font-family:inherit;min-width:70px}
 .echo-pick:hover{transform:scale(1.08)}
-.echo-pick.picked-clap{border-color:#4CAF50;background:#E8F5E9}
-.echo-pick.picked-rest{border-color:#90CAF9;background:#E3F2FD}
-.echo-pick.dim{opacity:0.35}
+.echo-pick.picked-clap{border-color:#4CAF50;background:#C8E6C9;box-shadow:0 0 8px rgba(76,175,80,0.3)}
+.echo-pick.picked-rest{border-color:#42A5F5;background:#BBDEFB;box-shadow:0 0 8px rgba(66,165,245,0.3)}
+.echo-pick.dim{opacity:0.25}
 </style>
     <div style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB);border:2px solid #90CAF9;border-radius:12px;padding:14px 18px;margin-bottom:20px;text-align:center;font-size:15px;font-weight:700;color:#1565C0;line-height:1.5">
       📝 <strong>Note for families:</strong> Please submit your work from the assignment image above. The interactive below is just for extra practice and fun &mdash; no need to submit it!
@@ -429,7 +437,7 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
     var p=patterns[r];
     var bd=document.getElementById('gw5-beats');
     bd.innerHTML=p.map(function(b,ix){
-      return '<div class="echo-beat-live" id="gw5b'+ix+'">'+(b?'👏':'⏸️')+'</div>';
+      return '<div class="echo-beat-live '+(b?'clap-beat':'rest-beat')+'" id="gw5b'+ix+'">'+(b?'👏':'⏸️')+'</div>';
     }).join('');
     document.getElementById('gw5-watch-wrap').style.display='block';
     var delay=400;
