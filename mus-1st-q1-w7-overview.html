@@ -236,7 +236,7 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
         items.forEach(function (item) {
             var clean = item.text.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E0}-\u{1F1FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{27BF}\u{2300}-\u{23FF}\u{2B50}\u{2B55}\u{25A0}-\u{25FF}\u{2702}-\u{27B0}\u{FE00}-\u{FE0F}\u{200D}\u{20E3}\u{E0020}-\u{E007F}]/gu, "").replace(/\s+/g, " ").trim();
             if (!clean) return;
-            var sentences = clean.match(/[^.!?]+[.!?]+["”’')\]]*\s*|[^.!?]+$/g) || [clean];
+            var sentences = clean.match(/[^.!?]+[.!?]+[""'')\]]*\s*|[^.!?]+$/g) || [clean];
             sentences.forEach(function (s) {
                 s = s.trim();
                 if (s) q.push({ el: item.el, text: s });
@@ -349,7 +349,7 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
     </div>
   </div>
   <div class="header-title">Music &middot; Grade 1</div>
-  <div class="header-week">Quarter 1 &middot; Week 7 &mdash; Contrasts in Music: Long/Short</div>
+  <div class="header-week">Quarter 1 &middot; Week 7 &mdash; Greed vs. Gratitude</div>
 </div>
 <div class="info-strip">
   <div class="info-item">
@@ -366,7 +366,7 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
   <div class="info-item">
     <div class="info-icon" style="background:linear-gradient(135deg,#F3E5F5,#E1BEE7);"><span class="bounce-emoji">📋</span></div>
     <div class="info-label">Standards</div>
-    <div class="standards-row"><span class="std-tag">MU.1.O.1.1<span class="std-tooltip"><span class="std-code">MU.1.O.1.1</span>Respond to contrasts in music as a foundation for understanding structure.</span></span></div>
+    <div class="standards-row"><span class="std-tag">MU.1.O.1.1<span class="std-tooltip"><span class="std-code">MU.1.O.1.1</span>Respond to contrasts in music, including high/low, same/different, fast/slow, loud/soft, and long/short.</span></span></div>
   </div>
 </div>
 <div class="content">
@@ -374,13 +374,13 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
 <div class="two-col">
   <div class="card theme-forest">
     <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">✨</span></div><div><div class="card-head-label">Essential Question</div><div class="card-head-title">Our Big Question</div></div></div>
-    <div class="card-body"><div class="eq-box"><span class="eq-icon bounce-emoji">🤔</span><div><div class="eq-label">Think About This&hellip;</div><div class="eq-question">&ldquo;How can we use our ears and bodies to feel the difference between long and short sounds in music?&rdquo;</div></div></div></div>
+    <div class="card-body"><div class="eq-box"><span class="eq-icon bounce-emoji">🤔</span><div><div class="eq-label">Think About This&hellip;</div><div class="eq-question">&ldquo;How can sounds and movements show us the difference between long and short?&rdquo;</div></div></div></div>
   </div>
   <div class="card theme-sky">
     <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">🎯</span></div><div><div class="card-head-label">Objectives</div><div class="card-head-title">I Can Statements</div></div></div>
-    <div class="card-body"><div class="ican-item"><div class="ican-num" style="background:linear-gradient(135deg,#FF7043,#FF8A65);">1</div><div class="ican-text"><strong>I can</strong> identify whether a sound is long or short by listening carefully</div></div>
-<div class="ican-item"><div class="ican-num" style="background:linear-gradient(135deg,#7E57C2,#9575CD);">2</div><div class="ican-text"><strong>I can</strong> show long and short sounds using movement, clapping, or my voice</div></div>
-<div class="ican-item"><div class="ican-num" style="background:linear-gradient(135deg,#26A69A,#4DB6AC);">3</div><div class="ican-text"><strong>I can</strong> describe how long and short sounds create patterns and contrast in music</div></div>
+    <div class="card-body"><div class="ican-item"><div class="ican-num" style="background:linear-gradient(135deg,#FF7043,#FF8A65);">1</div><div class="ican-text"><strong>I can</strong> identify whether a sound or note is long or short.</div></div>
+<div class="ican-item"><div class="ican-num" style="background:linear-gradient(135deg,#7E57C2,#9575CD);">2</div><div class="ican-text"><strong>I can</strong> clap, sing, or move to show a long sound and a short sound.</div></div>
+<div class="ican-item"><div class="ican-num" style="background:linear-gradient(135deg,#26A69A,#4DB6AC);">3</div><div class="ican-text"><strong>I can</strong> create a simple pattern using long and short sounds.</div></div>
 </div>
   </div>
 </div>
@@ -389,32 +389,32 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
   <div class="card-body"><div class="vocab-row"><div class="vocab-flip" onclick="this.classList.toggle('flipped')">
   <div class="vocab-inner">
     <div class="vocab-front">
-      <div class="vocab-emoji">〰️</div>
+      <div class="vocab-emoji">🔊</div>
       <div class="vocab-word">LONG</div>
       <div class="vocab-tap">Tap to reveal definition</div>
     </div>
-    <div class="vocab-back"><div class="vocab-def">A sound that keeps going for a while — like a bow sliding slowly across violin strings.</div></div>
+    <div class="vocab-back"><div class="vocab-def">A sound that is held out and lasts for a longer amount of time.</div></div>
   </div>
 </div>
 <div class="vocab-flip" onclick="this.classList.toggle('flipped')">
   <div class="vocab-inner">
     <div class="vocab-front">
-      <div class="vocab-emoji">⚡</div>
+      <div class="vocab-emoji">👏</div>
       <div class="vocab-word">SHORT</div>
       <div class="vocab-tap">Tap to reveal definition</div>
     </div>
-    <div class="vocab-back"><div class="vocab-def">A sound that ends quickly — like a snap or a clap.</div></div>
+    <div class="vocab-back"><div class="vocab-def">A sound that is quick and ends right away.</div></div>
   </div>
 </div>
 </div></div>
 </div>
 <div class="card theme-sun">
   <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">👀</span></div><div><div class="card-head-label">Before You Begin</div><div class="card-head-title">Notice &amp; Wonder</div></div></div>
-  <div class="card-body"><p>Try clapping one very LONG slow clap, then a quick SHORT clap. Do you notice the difference in how your hands feel? I wonder how musicians use long and short sounds to make music interesting.</p></div>
+  <div class="card-body"><p>Clap one short clap, then hold your arms out and stretch for a long, slow count of four, then pause. Did you notice the short clap happened fast and was over right away? Do you wonder how many short sounds could fit inside one long sound?</p></div>
 </div>
 <div class="card theme-purple">
   <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">💭</span></div><div><div class="card-head-label">After the Lesson</div><div class="card-head-title">Reflection</div></div></div>
-  <div class="card-body"><p>Can you think of a long sound and a short sound you hear in everyday life?</p></div>
+  <div class="card-body"><p>What is one way you showed a long sound and one way you showed a short sound today?</p></div>
 </div>
 <div class="art-divider"><span class="bounce-emoji">🎵</span> <span class="bounce-emoji">🎶</span> <span class="bounce-emoji">🎸</span> <span class="bounce-emoji">🎹</span> <span class="bounce-emoji">🥁</span> <span class="bounce-emoji">🎺</span> <span class="bounce-emoji">🎻</span> <span class="bounce-emoji">🎼</span></div>
 <div class="callout callout-tip"><span class="callout-icon bounce-emoji">📢</span><p><strong>Important:</strong> All On Demand Students can join Live Music class from 11:10&#8211;11:30 on Mondays &amp; Tuesdays to earn participation credit.</p></div>
