@@ -236,7 +236,7 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
         items.forEach(function (item) {
             var clean = item.text.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E0}-\u{1F1FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{27BF}\u{2300}-\u{23FF}\u{2B50}\u{2B55}\u{25A0}-\u{25FF}\u{2702}-\u{27B0}\u{FE00}-\u{FE0F}\u{200D}\u{20E3}\u{E0020}-\u{E007F}]/gu, "").replace(/\s+/g, " ").trim();
             if (!clean) return;
-            var sentences = clean.match(/[^.!?]+[.!?]+["”’')\]]*\s*|[^.!?]+$/g) || [clean];
+            var sentences = clean.match(/[^.!?]+[.!?]+["”’‘)\]]*\s*|[^.!?]+$/g) || [clean];
             sentences.forEach(function (s) {
                 s = s.trim();
                 if (s) q.push({ el: item.el, text: s });
@@ -349,7 +349,7 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
     </div>
   </div>
   <div class="header-title">Music &middot; Grade 1</div>
-  <div class="header-week">Quarter 1 &middot; Week 8 &mdash; Contrasts in Music: High/Low</div>
+  <div class="header-week">Quarter 1 &middot; Week 8 &mdash; Perseverance</div>
 </div>
 <div class="info-strip">
   <div class="info-item">
@@ -366,7 +366,7 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
   <div class="info-item">
     <div class="info-icon" style="background:linear-gradient(135deg,#F3E5F5,#E1BEE7);"><span class="bounce-emoji">📋</span></div>
     <div class="info-label">Standards</div>
-    <div class="standards-row"><span class="std-tag">MU.1.O.1.1<span class="std-tooltip"><span class="std-code">MU.1.O.1.1</span>Respond to contrasts in music as a foundation for understanding structure.</span></span></div>
+    <div class="standards-row"><span class="std-tag">MU.1.O.1.1<span class="std-tooltip"><span class="std-code">MU.1.O.1.1</span>Respond to contrasts in music, including high/low, same/different, fast/slow, loud/soft, and long/short.</span></span></div>
   </div>
 </div>
 <div class="content">
@@ -378,9 +378,9 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
   </div>
   <div class="card theme-sky">
     <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">🎯</span></div><div><div class="card-head-label">Objectives</div><div class="card-head-title">I Can Statements</div></div></div>
-    <div class="card-body"><div class="ican-item"><div class="ican-num" style="background:linear-gradient(135deg,#FF7043,#FF8A65);">1</div><div class="ican-text"><strong>I can</strong> identify whether a sound or pitch is high or low</div></div>
-<div class="ican-item"><div class="ican-num" style="background:linear-gradient(135deg,#7E57C2,#9575CD);">2</div><div class="ican-text"><strong>I can</strong> sing or move to show a high sound and a low sound</div></div>
-<div class="ican-item"><div class="ican-num" style="background:linear-gradient(135deg,#26A69A,#4DB6AC);">3</div><div class="ican-text"><strong>I can</strong> create a simple pattern using high and low sounds</div></div>
+    <div class="card-body"><div class="ican-item"><div class="ican-num" style="background:linear-gradient(135deg,#FF7043,#FF8A65);">1</div><div class="ican-text"><strong>I can</strong> identify whether a sound or pitch is high or low.</div></div>
+<div class="ican-item"><div class="ican-num" style="background:linear-gradient(135deg,#7E57C2,#9575CD);">2</div><div class="ican-text"><strong>I can</strong> sing or move to show a high sound and a low sound.</div></div>
+<div class="ican-item"><div class="ican-num" style="background:linear-gradient(135deg,#26A69A,#4DB6AC);">3</div><div class="ican-text"><strong>I can</strong> create a simple pattern using high and low sounds.</div></div>
 </div>
   </div>
 </div>
@@ -410,7 +410,7 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
 </div>
 <div class="card theme-sun">
   <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">👀</span></div><div><div class="card-head-label">Before You Begin</div><div class="card-head-title">Notice &amp; Wonder</div></div></div>
-  <div class="card-body"><p>Sing or hum a high 'ooo' sound while reaching your arms way up, then sing a low 'ooo' sound while crouching down low. Did you notice your voice felt different in your throat for the high sound versus the low sound? I wonder what makes a sound high or low?</p></div>
+  <div class="card-body"><p>Sing or hum a high &ldquo;ooo&rdquo; sound while reaching your arms way up, then sing a low &ldquo;ooo&rdquo; sound while crouching down low. Did you notice your voice felt different in your throat for the high sound versus the low sound? I wonder what makes a sound high or low?</p></div>
 </div>
 <div class="card theme-purple">
   <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">💭</span></div><div><div class="card-head-label">After the Lesson</div><div class="card-head-title">Reflection</div></div></div>
@@ -418,6 +418,11 @@ function _melody(notes,bpm){try{var ctx=_ac(),beatS=60/(bpm||110),t=ctx.currentT
 </div>
 <div class="art-divider"><span class="bounce-emoji">🎵</span> <span class="bounce-emoji">🎶</span> <span class="bounce-emoji">🎸</span> <span class="bounce-emoji">🎹</span> <span class="bounce-emoji">🥁</span> <span class="bounce-emoji">🎺</span> <span class="bounce-emoji">🎻</span> <span class="bounce-emoji">🎼</span></div>
 <div class="callout callout-tip"><span class="callout-icon bounce-emoji">📢</span><p><strong>Important:</strong> All On Demand Students can join Live Music class from 11:10&#8211;11:30 on Mondays &amp; Tuesdays to earn participation credit.</p></div>
+
+<div class="card theme-coral" style="margin-top:22px;margin-bottom:0">
+  <div class="card-head"><div class="card-head-icon"><span class="bounce-emoji">🧺</span></div><div><div class="card-head-label">Let&rsquo;s Practice</div><div class="card-head-title">High or Low? Sort</div></div></div>
+  <div class="card-body" style="padding:0"><iframe src="mus-1st-q1-w8-sort.html" title="High or Low? Sort sorting game" style="display:block;width:100%;height:640px;border:0"></iframe></div>
+</div>
 </div>
 
 <div class="paint-border"></div>
